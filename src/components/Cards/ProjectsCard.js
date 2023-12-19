@@ -6,7 +6,8 @@ import { FaGithub } from "react-icons/fa";
 const Card =styled.div`
     display: flex;
     justify-content: center;
-    padding: 26px 20px;
+    align-ietms: flex-start;
+    padding: 15px 15px;
     width: 330px;
     height: 490px;
     background-color: ${({ theme }) => theme.card};
@@ -96,10 +97,10 @@ font-weight: 400;
 color: ${({ theme }) => theme.text_secondary+99};
 overflow: hidden;
 text-overflow: ellipsis;
--webkit-line-clamp: 3;
+-webkit-line-clamp: 4;
 -webkit-box-orient: vertical;
 display: -webkit-box;
-margin-top: 8px;
+margin-top: 4px;
 max-width: 100%;
 `;
 
@@ -114,7 +115,7 @@ border: 1px solid ${({ theme }) => theme.text_primary + 80};
 border-radius: 12px;
 padding: 12px 14px;
 font-weight: 400;
-width: 30%;
+width: 40%;
 margin-top: 20px;
 
 &:hover {

@@ -107,7 +107,7 @@ const CardContainer = styled.div`
 
 const Projects = () => {
   const [toggle, setToggle] = useState("all");
-
+  const categories = [...new Set(projects.flatMap(project => project.category))];
   return (
     
     <Container id="projects">
@@ -137,11 +137,11 @@ const Projects = () => {
                 ) : (<ToggleButton value="backend" onClick={() => setToggle('backend')}>BACKEND</ToggleButton>
                 )}
                 <Divider />
-                {toggle === "full stack" ? (
-                <ToggleButton active onClick={() => setToggle('full stack')}>
-                  FULL STACK
+                {toggle === "design" ? (
+                <ToggleButton active onClick={() => setToggle('design')}>
+                  DESIGN
                   </ToggleButton>
-                ) : (<ToggleButton value="full stack" onClick={() => setToggle('full stack')}>FULL STACK</ToggleButton>
+                ) : (<ToggleButton value="design" onClick={() => setToggle('design')}>DESIGN</ToggleButton>
                 )}
             </ToggleGroup>
 

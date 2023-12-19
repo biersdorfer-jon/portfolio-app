@@ -139,6 +139,7 @@ const SkillItem = styled.div`
   `;
 
 const Skills = () => { 
+
   return (
     <Container id="skills">
       <Wrapper>
@@ -154,7 +155,8 @@ const Skills = () => {
                 {
                   skill.skills.map((item) => (
                     <SkillItem>
-                      <SkillImage src={item.image} />
+                      {/* <SkillImage src={item.image} /> */}
+                      {React.createElement(item.icon, {size: 20})}
                       {item.name}
                     </SkillItem>
                   ))}

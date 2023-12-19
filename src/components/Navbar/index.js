@@ -122,6 +122,7 @@ height: 70%;
 }
 @media screen and (max-width: 640px) {
 font-size: 0.8rem;
+  
 }
 `;
 
@@ -150,7 +151,7 @@ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 opacity: ${({ open }) => (open ? "1" : "0")};
 z-index: ${({ open }) => (open ? "1" : "-1")};
 `
-const MobileLink = styled.div`
+const MobileLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   padding: 0px 10px;
@@ -161,6 +162,23 @@ const MobileLink = styled.div`
     color: ${({ theme }) => theme.primary};
   }
 `;
+const MobileGithubButton = styled.a`
+  padding: 10px 16px;
+  color: ${({ theme }) => theme.primary};
+  background: transparent;
+  width: max-content;
+  transition: color 0.2s ease-in-out;
+  font-size: 0.85rem;
+  border: 1.8px solid ${({ theme }) => theme.primary};
+border-radius: 20px;
+text-decoration: none;
+
+  &:hover {
+    color: ${({ theme }) => theme.white};
+    background-color: ${({ theme }) => theme.primary};
+  }
+`;
+
 
 const Navbar = () => {
   
@@ -211,7 +229,7 @@ const Navbar = () => {
             }}>
               Skills
             </MobileLink>
-            <MobileLink href="#experience"
+            <MobileLink href="#projects"
             onClick={() => {
               setOpen(!open)
             }}>
@@ -224,18 +242,11 @@ const Navbar = () => {
               Education
             </MobileLink>
             
-            <GithubButton href={Bio.github}
+            <MobileGithubButton href={Bio.github}
             target="_blank"
-              style={{
-                padding: "10px 16px",
-                background: `${theme.primary}`,
-                color: "white",
-                width: "max-content",
-              }}
-              
               >
               Github Profile
-            </GithubButton>
+            </MobileGithubButton>
             
           </MobileMenu>
         )
