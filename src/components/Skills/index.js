@@ -9,6 +9,7 @@ justify-content: center;
 position: relative;
 z-index: 1;
 align-items: center;
+padding-top: 60px;
 `;
 
 const Wrapper = styled.div`
@@ -134,8 +135,8 @@ const SkillItem = styled.div`
   `;
 
   const SkillImage =styled.img`
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
   `;
 
 const Skills = () => { 
@@ -156,7 +157,7 @@ const Skills = () => {
                   skill.skills.map((item) => (
                     <SkillItem>
                       {/* <SkillImage src={item.image} /> */}
-                      {React.createElement(item.icon, {size: 20})}
+                      {React.createElement(item.icon, {size: 35})}
                       {item.name}
                     </SkillItem>
                   ))}

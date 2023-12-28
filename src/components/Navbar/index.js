@@ -1,9 +1,7 @@
 import React from 'react'
 import styled, { useTheme } from 'styled-components';
 import { FaBars } from "react-icons/fa";
-import Logo from '../../images/JB LOGO W.png';
 import { Bio } from '../../data/constants';
-
 
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -190,8 +188,8 @@ const Navbar = () => {
     <Nav>
       <NavContainer>
 <ImageContainer>
-      <a>
-              <Image src={Logo} alt="Logo" />
+      <a href="#about">
+              <Image src={require(`../../images/${theme.img}`)}/>
               {/* <Span>Portfolio</Span> */}
               </a>
               </ImageContainer>

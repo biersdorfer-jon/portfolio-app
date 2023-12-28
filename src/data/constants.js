@@ -2,8 +2,8 @@ import { TbBrandNextjs, TbBrandVscode } from "react-icons/tb";
 import { FaReact, FaHtml5, FaCss3Alt, FaSass, FaPython, FaPhp, FaJava, FaNode, FaFigma, FaGithub } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io5";
 import { GrMysql } from "react-icons/gr";
-import { SiAdobephotoshop } from "react-icons/si";
-import { BiLogoJavascript, BiLogoNetlify } from "react-icons/bi";
+import { SiAdobephotoshop, SiAdobepremierepro } from "react-icons/si";
+import { BiLogoNetlify } from "react-icons/bi";
 
 export const Bio = {
     name: "Jon Biersdorfer 😁",
@@ -16,7 +16,6 @@ export const Bio = {
 
     description: "Mastering the art of code, our web developer seamlessly blends creativity and technical prowess. Proficient in HTML, CSS, and JavaScript, they craft sleek, user-friendly websites that captivate and inspire. Ready for fresh challenges, our web wizard is the architect of online experiences that leave a lasting impact.",
     github: "https://github.com/biersdorfer-jon",
-    resume: "https://docs.google.com/document/d/11DgE630B1Wo8a-dsTIKICUWIYaybf_S-m0_jI67QsxM/edit?usp=sharing",
     insta: "https://www.instagram.com/biersdorfer.jon",
     linkedin: "https://www.linkedin.com/in/jon-biersdorfer/",
 };
@@ -117,11 +116,18 @@ export const skills = [
             icon: TbBrandVscode, 
         },
         {
-          name: "Adobe Photoshop",
+          name: "Photoshop",
           image:
           "https://raw.githubusercontent.com/gilbarbara/logos/f133ea921b012052000964e3feb023b57146895b/logos/adobe-photoshop.svg",
           icon: SiAdobephotoshop, 
         },
+        {
+          name: "Premier Pro",
+          image:
+            "https://camo.githubusercontent.com/ed93c2b000a76ceaad1503e7eb9356591b885227e82a36a005b9d3498b303ba5/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6669676d612f6669676d612d69636f6e2e737667",
+            icon: SiAdobepremierepro, 
+          },
+    
         {
           name: "Figma",
           image:
@@ -138,7 +144,7 @@ export const skills = [
       id: 1,
       title: "Portfolio",
       date: "Nov 2023",
-      description: "My portfolio website",
+      description: "A portfolio website introducing myself while showcasing several of my skill sets and my various projects.",
       image: "portfolio-thumb.png",
       tags: [
         "React js",
@@ -150,7 +156,7 @@ export const skills = [
       ],
 
       category: "frontend",
-      github: "",
+      github: "https://github.com/biersdorfer-jon/portfolio-app",
       web: "",
     },
      {

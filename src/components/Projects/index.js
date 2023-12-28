@@ -12,7 +12,8 @@ position: relative;
 z-index: 1;
 align-items: center;
 // clip-path: polygon(0 0 , 100% 0, 100% 100%, 100% 98%, 0 100%);
-margin-top: 60px;
+margin-top: 20px;
+padding-top: 60px;
 `;
 
 const Wrapper = styled.div`
@@ -20,7 +21,6 @@ position: relative;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 10px 0px 40px 0px;
 flex-direction: column;
 width: 100%;
 max-width: 1350px;
