@@ -5,6 +5,8 @@ import { Typewriter } from 'react-simple-typewriter';
 import HeroImg from "../../images/Hero3.jpg";
 import HeroBgAnimation from '../../HeroBgAnimation';
 import Resume from '../../images/Resume - Jon Biersdorfer.pdf';
+import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
+
 
  const HeroContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
@@ -152,6 +154,9 @@ import Resume from '../../images/Resume - Jon Biersdorfer.pdf';
 
  const Span = styled.span`
   color: ${({ theme }) => theme.primary};
+  // background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
   cursor: pointer;
 `;
 
@@ -159,10 +164,11 @@ import Resume from '../../images/Resume - Jon Biersdorfer.pdf';
   font-size: 20px;
   line-height: 32px;
   margin-bottom: 42px;
-  color: ${({ theme }) => theme.text_primary + 95};
+  color: ${({ theme }) => theme.text_primary};
 
   @media (max-width: 960px) {
     text-align: center;
+    margin-bottom: 30px;
   }
 
   @media (max-width: 640px) {
@@ -170,14 +176,42 @@ import Resume from '../../images/Resume - Jon Biersdorfer.pdf';
     line-height: 32px;
   }
 `;
+const ButtonContainerPC = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  @media (max-width: 960px) {
+    display: none;
+    
+  }
+`;
+
+const Button = styled.a`
+  border-radius: 50%;
+  color: ${({ theme }) => theme.white};
+  padding: 8px;
+  background: hsla(271, 100%, 50%, 1);
+    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  width: 60px;
+  height: 60px;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+
+`;
 
  const ResumeButton = styled.a`
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
     text-decoration: none;
-    width: 95%;
-    max-width: 300px;
+    width: 50%;
     text-align: center;
     padding: 16px 0;
     color:${({ theme }) => theme.white};
@@ -203,8 +237,35 @@ import Resume from '../../images/Resume - Jon Biersdorfer.pdf';
         padding: 12px 0;
         font-size: 18px;
     } 
+    @media (max-width: 960px) {
+      max-width: 300px;
+      width: 85%;
+      margin-bottom: 30px;
+    }
 
 `;
+
+const ButtonContainerMobile = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  @media (min-width: 961px) {
+    display: none;
+}
+`;
+
+const Socials = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+`;
+
+
+
 const Hero = () => {
   return (
     <div id="about">
@@ -231,7 +292,32 @@ const Hero = () => {
                         </Span>
                     </TextLoop>
                 <SubTitle>{Bio.description}</SubTitle>
+                <ButtonContainerPC>
                 <ResumeButton href={Resume} download="Resume - Jon Biersdorfer.pdf">Check Resume</ResumeButton>
+                  <Button href={Bio.github} target="_blank">
+                  <FaGithub />
+                  </Button>
+                  <Button href={Bio.linkedin} target="_blank">
+                  <FaLinkedin />
+                  </Button>
+                  <Button href={Bio.insta} target="_blank">
+                  <FaInstagram />
+                  </Button>
+                </ButtonContainerPC>
+                <ButtonContainerMobile>
+                <ResumeButton href={Resume} download="Resume - Jon Biersdorfer.pdf">Check Resume</ResumeButton>
+                    <Socials>
+                    <Button href={Bio.github} target="_blank">
+                  <FaGithub />
+                  </Button>
+                  <Button href={Bio.linkedin} target="_blank">
+                  <FaLinkedin />
+                  </Button>
+                  <Button href={Bio.insta} target="_blank">
+                  <FaInstagram />
+                  </Button>
+                    </Socials>
+                </ButtonContainerMobile>
                 </HeroLeftContainer>
                 <HeroRightContainer>
                     <Image src={HeroImg} alt="Hero" />

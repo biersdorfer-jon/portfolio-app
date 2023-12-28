@@ -9,8 +9,13 @@ import Education from './components/Education';
 import Hero from './components/HeroSection';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import { useState } from 'react';
 
+const themes = {
+  light : lightTheme,
+  dark : darkTheme,
 
+}
 const Body = styled.div`
 background-color: ${({theme}) => theme.bg};
 width: 100%;
@@ -42,18 +47,20 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%;
 `;
 
 function App() {
+
+  const [theme, setTheme] = useState("dark")
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={themes[theme]}> 
       <Router>
-      <Navbar />
+      <Navbar  theme={theme} setTheme={setTheme}/>
       <Body>
-        <Hero />
+        <Hero theme={theme} setTheme={setTheme}/>
         <Wrapper>
-          <Skills />
+          <Skills theme={theme} setTheme={setTheme} />
         
-        <Projects />
+        <Projects theme={theme} setTheme={setTheme}/>
         
-          <Education />
+          <Education theme={theme} setTheme={setTheme}/>
           </Wrapper>
       </Body>
       </Router>
@@ -62,3 +69,4 @@ function App() {
 };
 
 export default App;
+

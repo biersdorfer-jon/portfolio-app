@@ -2,6 +2,10 @@ import React from 'react'
 import styled, { useTheme } from 'styled-components';
 import { FaBars } from "react-icons/fa";
 import { Bio } from '../../data/constants';
+import { CgSun } from "react-icons/cg";
+import { HiMoon } from "react-icons/hi";
+import { FaGithub } from 'react-icons/fa6';
+
 
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -32,12 +36,12 @@ const NavContainer = styled.div`
 const ImageContainer = styled.div`
 display: flex;
 align-items: center;
-justify-content: center;
-width: 80%;
+justify-content: flex-start;
+width: 50%;
 height: 100%;
 padding: 0 6px;
 @media screen and (max-width: 768px) {
-  width: 20%
+  width: 80%;
 }
 `;
 
@@ -56,11 +60,10 @@ align-items: center;
 const MobileIcon = styled.div`
 display: none;
 @media screen and (max-width: 768px) {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(-100%, 50%);
+  display: flex;
+  justify-content: center;
+  width: 10%;
+  align-items: center;
   font-size: 1.5rem;
   cursor: pointer;
   color: ${({ theme }) => theme.text_primary};
@@ -84,6 +87,7 @@ font-weight: 500;
 cursor: pointer;
 text-decoration: none;
 transition: 0.2s ease-in-out;
+font-size: 19px;
 &:hover {
   color: ${({ theme }) => theme.primary};
 }
@@ -93,11 +97,14 @@ const ButtonContainer = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-width: 80%;
+width: 30%;
 height: 100%;
 padding: 0 6px;
 @media screen and (max-width: 768px) {
   display: none;
+}
+// @media screen and (max-width: 1200px) {
+//   width: 70%;
 }
 `
 const GithubButton = styled.a`
@@ -106,10 +113,11 @@ color: ${({ theme }) => theme.primary};
 border: 1.8px solid ${({ theme }) => theme.primary};
 border-radius: 20px;
 display: flex;
+gap: 8px;
 justify-content: center;
-text-decoration: none;
 align-items: center;
-padding: 0px 20px;
+text-decoration: none;
+padding: 0px 50px;
 font-size: 1rem;
 cursor: pointer;
 height: 70%;
@@ -118,10 +126,10 @@ height: 70%;
   background-color: ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.white};
 }
-@media screen and (max-width: 640px) {
-font-size: 0.8rem;
-  
+@media screen and (max-width: 850px) {
+padding: 0px 35px;
 }
+
 `;
 
 const Span = styled.span`
@@ -140,7 +148,7 @@ const MobileMenu = styled.div`
   top: 80px;
   right: 0;
   width: 100%;
-  paddding: 12px 40px 24px 40px;
+  padding: 12px 40px 24px 40px;
   background: ${({ theme }) => theme.card_light+99};
   transition: all 0.3s ease-in-out;
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
@@ -166,7 +174,12 @@ const MobileGithubButton = styled.a`
   background: transparent;
   width: max-content;
   transition: color 0.2s ease-in-out;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 32px;
   border: 1.8px solid ${({ theme }) => theme.primary};
 border-radius: 20px;
 text-decoration: none;
@@ -177,13 +190,49 @@ text-decoration: none;
   }
 `;
 
+const ToggleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50%;
+  height: 100%;
+  padding: 0 6px;
+  @media screen and (max-width: 768px) {
+    width: 10%;
+  }
 
-const Navbar = () => {
+  @media screen and (max-width: 400px) {
+    width: 20%;
+`;
+
+const Toggle = styled.a`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  color: ${({ theme }) => theme.text_primary};
+  transition: all .5s ease;
+
+`;
+
+const Navbar = (props) => {
   
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
+  function changeTheme() {
+    if (props.theme === "light") {
+      props.setTheme("dark");
+    } else {
+      props.setTheme("light");
+    }
+  }
 
-  
+  const icon = props.theme === "light" ? <HiMoon size={30} /> : <CgSun size={30} />
+
   return (
     <Nav>
       <NavContainer>
@@ -207,16 +256,22 @@ const Navbar = () => {
         <NavLink href='#projects'>Projects</NavLink>
         <NavLink href='#education'>Education</NavLink>
       </NavItems>
-      <ButtonContainer>
+      {/* <ButtonContainer>
         <GithubButton href={Bio.github}
-            target="_blank">Github Profile</GithubButton>
-      </ButtonContainer>
+            target="_blank"><FaGithub />Github</GithubButton>
+            
+      </ButtonContainer> */}
+      <ToggleContainer>
+      <Toggle onClick={changeTheme}>
+              {icon}
+            </Toggle>
+      </ToggleContainer>
       </NavContainer>
       {
         open && (
           <MobileMenu open={open}>
             
-            <MobileLink
+            <MobileLink href="#about"
             onClick={() => {
               setOpen(!open)
             }}>About
@@ -243,7 +298,7 @@ const Navbar = () => {
             <MobileGithubButton href={Bio.github}
             target="_blank"
               >
-              Github Profile
+              <FaGithub />Github
             </MobileGithubButton>
             
           </MobileMenu>
