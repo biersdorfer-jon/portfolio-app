@@ -217,6 +217,13 @@ const Toggle = styled.a`
   color: ${({ theme }) => theme.text_primary};
   transition: all .5s ease;
 
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+    transform: scale(1.15);
+    transition: all .5s ease;
+    
+  }
+
 `;
 
 const Navbar = (props) => {

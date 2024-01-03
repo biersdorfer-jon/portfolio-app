@@ -5,6 +5,18 @@ import { BsBoxArrowUpLeft } from "react-icons/bs";
 
 
 
+const ProjectImage = styled.img`
+    width: 100%;
+     height: 180px;
+    align-items: cneter;
+    background-color: ${({ theme }) => theme.white};
+    object-fit: cover;
+    broder-radius: 10px;
+    box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
+    cursor: pointer;
+    
+
+`;
 const Card =styled.div`
     display: flex;
     justify-content: center;
@@ -13,7 +25,7 @@ const Card =styled.div`
     width: 330px;
     height: 490px;
     background-color: ${({ theme }) => theme.card};
-    cursor: pointer;
+    // cursor: pointer;
     box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
     overflow: hidden;
     gap: 14px;
@@ -24,20 +36,13 @@ const Card =styled.div`
         transform: scale(1.05);
         transform: translateY(-10px);
         box-shadow: 0 0 12px 4px rgba(0,0,0,0.6);
-        filter: brightness(1.05);
+        
         transition: all ease-in-out 0.3s;
+        /* Darkening effect on the image */
+        ${ProjectImage} {
+            filter: brightness(0.7); /* Adjust the brightness value for darkening */
+        }
     }
-
-`;
-
-const ProjectImage = styled.img`
-    width: 100%;
-     height: 180px;
-    align-items: cneter;
-    background-color: ${({ theme }) => theme.white};
-    object-fit: cover;
-    broder-radius: 10px;
-    box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
 
 `;
 
@@ -164,6 +169,19 @@ margin-top: 20px;
 
 `;
 
+const SoonButton = styled.div`
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: ${({ theme }) => theme.text_secondary};
+border: 1px solid ${({ theme }) => theme.text_primary + 80};
+border-radius: 12px;
+padding: 12px 14px;
+font-weight: 400;
+margin-top: 20px;
+`;
 
 
 
@@ -181,12 +199,19 @@ const ProjectsCard = ({project}) => {
             <Date>{project.date}</Date>
             <Description>{project.description}</Description>
             <ButtonContainer>
-            <GithubButton href={project.github} target="_blank">
-                <FaGithub />Github
-            </GithubButton>
+      {project.github ? (
+        <GithubButton href={project.github} target="_blank">
+          <FaGithub /> Github
+        </GithubButton>
+      ) : (
+        <SoonButton>Coming Soon</SoonButton>
+      )}
+      {project.github ? (
             <DemoButton>
                 <BsBoxArrowUpLeft />Live Demo
             </DemoButton>
+            ) : (<></>
+                )}
             </ButtonContainer>
         </Details>
     </Card>

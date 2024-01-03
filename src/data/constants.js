@@ -186,6 +186,33 @@ export const skills = [
        web: "",
      },
 
+     {
+      id: 2,
+      title:"Honors Class Page",
+      date: "Coming Soon",
+      description: "A full-stack honors class website with student biographies offering a detailed glimpse into their achievements and aspirations.",
+      image: "portfolio-thumb.png",
+      tags: [
+        "React js",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Next Js",
+        "Node Js",
+        "MySQL",
+        "PHP",
+      ],
+
+      category: 
+       [ 
+         "frontend",
+         "backend",
+       ],
+
+      github: "",
+      web: "",
+    },
+
   ]
 
 

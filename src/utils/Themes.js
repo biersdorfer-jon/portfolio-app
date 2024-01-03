@@ -10,14 +10,16 @@ export const darkTheme = {
     white: "#FFFFFF",
     black: "#000000",
     wrapperbg: "rgb(86,0,126)",
-    wrapperbg_secondary: "radial-gradient(circle, rgba(86,0,126,1) 0%, rgba(28,28,39,1) 25%)",
+    // wrapperbg_secondary: "radial-gradient(circle, rgba(86,0,126,1) 0%, rgba(28,28,39,1) 25%)",
+    wrapperbg_secondary: "radial-gradient(circle, rgba(86,0,126,1) 0%, #191924 25%)",
     img: "JB LOGO W.png",
+    glow: "#854CE6",
 };
 
 export const lightTheme = {
     bg: "#fef5ff",
     bgLight: "#fef5ff",
-    primary: "#be1adb",
+    primary: "#854CE6",
     text_primary: "#111111",
     text_secondary: "#363738",
     card: "#fef5ff",
@@ -27,4 +29,5 @@ export const lightTheme = {
     wrapperbg: "rgb(255,255,255);",
     wrapperbg_secondary: "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(254,245,255,1) 35%)",
     img: "JB LOGO B.png",
+    glow: "#854CE6",
 };

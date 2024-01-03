@@ -21,8 +21,8 @@ const Container = styled.div`
     align-items: center;
     padding: 0px 0px 60px 0px;
     padding-top: 60px;
-    @media (max-width: 960px) {
-        padding: 0px;
+    @media (max-width: 768px) {
+        padding: 30px;
     }
 `;
 

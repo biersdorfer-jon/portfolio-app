@@ -10,6 +10,9 @@ import Hero from './components/HeroSection';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import { useState } from 'react';
+import peak from './images/peak.svg';
+import Footer from './components/Footer';
+
 
 const themes = {
   light : lightTheme,
@@ -36,8 +39,11 @@ const Wrapper = styled.div`
 //    rgba(0, 70, 209, 0.15) 100%
 //  );
 
-background: ${({ theme }) => theme.wrapperbg};
-background: ${({ theme }) => theme.wrapperbg_secondary};
+ background: ${({ theme }) => theme.wrapperbg};
+ background: ${({ theme }) => theme.wrapperbg_secondary};
+
+// background-image: url(${peak});
+//   background-size: cover; /* Adjust as needed */
 
 
 
@@ -55,6 +61,7 @@ function App() {
       <Navbar  theme={theme} setTheme={setTheme}/>
       <Body>
         <Hero theme={theme} setTheme={setTheme}/>
+        
         <Wrapper>
           <Skills theme={theme} setTheme={setTheme} />
         
@@ -62,6 +69,7 @@ function App() {
         
           <Education theme={theme} setTheme={setTheme}/>
           </Wrapper>
+          <Footer theme={theme} setTheme={setTheme}/>
       </Body>
       </Router>
     </ThemeProvider>

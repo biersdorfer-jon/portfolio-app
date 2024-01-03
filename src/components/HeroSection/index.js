@@ -22,7 +22,7 @@ import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
   }
   z-index: 1;
 
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
+  // clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
 
  const HeroBg = styled.div`
