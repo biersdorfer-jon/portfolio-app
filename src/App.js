@@ -17,7 +17,7 @@ const themes = {
 
 }
 const Body = styled.div`
-background-color: ${({theme}) => theme.bg};
+background-color: ${({theme}) => theme.card_light};
 width: 100%;
 height: 100%;
 `;

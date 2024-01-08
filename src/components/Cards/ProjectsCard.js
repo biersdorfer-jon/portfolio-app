@@ -19,7 +19,7 @@ const Card =styled.div`
     display: flex;
     justify-content: center;
     align-ietms: flex-start;
-    padding: 15px 15px;
+    padding: 15px 15px 8px 15px;
     width: 330px;
     height: 490px;
     background-color: ${({ theme }) => theme.card};
