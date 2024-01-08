@@ -96,13 +96,13 @@ font-weight: 400;
 color: ${({ theme }) => theme.text_secondary};
 overflow: hidden;
 text-overflow: ellipsis;
--webkit-line-clamp: 4;
+-webkit-line-clamp: 5;
 -webkit-box-orient: vertical;
 display: -webkit-box;
 margin-top: 4px;
 max-width: 100%;
-height: 70px; 
-padding-bottom: 10px;
+height: 80px;
+
 `;
 
 const DescDisplay = styled.p`
@@ -130,7 +130,7 @@ border-radius: 12px;
 padding: 12px 14px;
 font-weight: 400;
 width: 45%;
-margin-top: 20px;
+margin-top: 5px;
 text-decoration: none;
 
 &:hover {
@@ -154,7 +154,7 @@ border-radius: 12px;
 padding: 12px 14px;
 font-weight: 400;
 width: 45%;
-margin-top: 20px;
+margin-top: 5px;
 text-decoration: none;
 
 &:hover {
@@ -178,7 +178,7 @@ border: 1px solid ${({ theme }) => theme.text_primary + 80};
 border-radius: 12px;
 padding: 12px 14px;
 font-weight: 400;
-margin-top: 20px;
+margin-top: 5px;
 
 
 `;
@@ -200,6 +200,7 @@ const ProjectsCard = ({project}) => {
             <Description>
             <DescDisplay>{project.description}</DescDisplay>
             </Description>
+            
             <ButtonContainer>
       {project.github ? (
         <GithubButton href={project.github} target="_blank">
@@ -215,7 +216,7 @@ const ProjectsCard = ({project}) => {
             ) : (<></>
                 )}
             </ButtonContainer>
-        </Details>
+            </Details>
     </Card>
   )
 }
