@@ -102,6 +102,11 @@ display: -webkit-box;
 margin-top: 4px;
 max-width: 100%;
 height: 70px; 
+padding-bottom: 10px;
+`;
+
+const DescDisplay = styled.p`
+display: inline;
 `;
 
 const ButtonContainer = styled.div`
@@ -136,9 +141,6 @@ text-decoration: none;
 
 }
 
-@media (max-width: 600px) {
-    margin-top: 8px;
-}
 `;
 const DemoButton = styled.a`
 display: flex;
@@ -163,9 +165,6 @@ text-decoration: none;
 
 }
 
-@media (max-width: 600px) {
-    margin-top: 8px;
-}
 `;
 
 const SoonButton = styled.div`
@@ -181,9 +180,6 @@ padding: 12px 14px;
 font-weight: 400;
 margin-top: 20px;
 
-@media (max-width: 600px) {
-    margin-top: 8px;
-}
 
 `;
 
@@ -201,7 +197,9 @@ const ProjectsCard = ({project}) => {
         <Details>
             <Title>{project.title}</Title>
             <Date>{project.date}</Date>
-            <Description>{project.description}</Description>
+            <Description>
+            <DescDisplay>{project.description}</DescDisplay>
+            </Description>
             <ButtonContainer>
       {project.github ? (
         <GithubButton href={project.github} target="_blank">

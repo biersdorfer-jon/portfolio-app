@@ -144,7 +144,7 @@ export const skills = [
       id: 1,
       title: "Portfolio",
       date: "Nov 2023",
-      description: "A portfolio website introducing myself while showcasing several of my skill sets and my various projects.",
+      description: "A fully responsive portfolio website introducing myself while showcasing several of my skill sets and my various projects.",
       image: "portfolio.png",
       tags: [
         "React js",
