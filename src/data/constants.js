@@ -145,7 +145,7 @@ export const skills = [
       title: "Portfolio",
       date: "Nov 2023",
       description: "A portfolio website introducing myself while showcasing several of my skill sets and my various projects.",
-      image: "portfolio-thumb.png",
+      image: "portfolio.png",
       tags: [
         "React js",
         "JavaScript",
@@ -163,8 +163,8 @@ export const skills = [
        id: 2,
        title:"Apparal Ecommerce Site",
        date: "Coming Soon",
-       description: "Building a full-stack athletic apparel store, optimizing database performance for a seamless and dynamic eCommerce experience.",
-       image: "portfolio-thumb.png",
+       description: "A full-stack athletic apparel store, optimizing database performance for a seamless and dynamic eCommerce experience.",
+       image: "RTG1.png",
        tags: [
          "React js",
          "JavaScript",
@@ -176,22 +176,17 @@ export const skills = [
          "PHP",
        ],
 
-       category: 
-        [ 
-          "frontend",
-          "backend",
-        ],
-
+       category: "backend",
        github: "",
        web: "",
      },
 
      {
-      id: 2,
+      id: 3,
       title:"Honors Class Page",
       date: "Coming Soon",
       description: "A full-stack honors class website with student biographies offering a detailed glimpse into their achievements and aspirations.",
-      image: "portfolio-thumb.png",
+      image: "Honors.png",
       tags: [
         "React js",
         "JavaScript",
@@ -203,17 +198,12 @@ export const skills = [
         "PHP",
       ],
 
-      category: 
-       [ 
-         "frontend",
-         "backend",
-       ],
-
+      category: "backend",
       github: "",
       web: "",
     },
 
-  ]
+  ];
 
 
 export const education = [
@@ -224,11 +214,11 @@ export const education = [
     date: "Aug 2020 - May 2024",
     gpa: 3.87,
     major: "Bachelor of Science - Business IT: Software Development and Multimedia",
-    description: "The Software Development and Multimedia Option focuses on object-oriented technology, software engineering, multimedia and web development, and emerging technologies. Careers for students with this option include web masters, web programmers, computer programmers, systems analysts, and software engineers.",
+    description: "The Software Development and Multimedia Option focuses on object-oriented technology, software engineering, multimedia and web development, and emerging technologies. These concepts have enabled me to craft an advanced skill set that is instrumental in navigating the ever-evolving landscape of software development and multimedia.",
     minor:"Honors",
 
 
 
 
   }
-]
+];

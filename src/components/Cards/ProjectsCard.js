@@ -14,8 +14,6 @@ const ProjectImage = styled.img`
     broder-radius: 10px;
     box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
     cursor: pointer;
-    
-
 `;
 const Card =styled.div`
     display: flex;
@@ -25,7 +23,6 @@ const Card =styled.div`
     width: 330px;
     height: 490px;
     background-color: ${({ theme }) => theme.card};
-    // cursor: pointer;
     box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
     overflow: hidden;
     gap: 14px;
@@ -38,7 +35,6 @@ const Card =styled.div`
         box-shadow: 0 0 12px 4px rgba(0,0,0,0.6);
         
         transition: all ease-in-out 0.3s;
-        /* Darkening effect on the image */
         ${ProjectImage} {
             filter: brightness(0.7); /* Adjust the brightness value for darkening */
         }
@@ -53,7 +49,6 @@ const Tags = styled.div`
     gap: 8px;
     margin-top: 4px;
     align-items: center;
-
 `;
 
 const Tag = styled.span`
@@ -63,9 +58,6 @@ const Tag = styled.span`
     color: ${({ theme }) => theme.primary};
     padding: 2px 8px;
     border-radius: 10px;
-
-
-
 `;
 
 const Details =styled.div`
@@ -119,7 +111,7 @@ const ButtonContainer = styled.div`
     gap: 8px;
     justify-content: center;
     align-items: center;
-`
+`;
 
 const GithubButton = styled.a`
 display: flex;
@@ -143,7 +135,6 @@ text-decoration: none;
   box-shadow: 0px 0px 15px 2px rgba(224,224,224,1);
 
 }
-
 `;
 const DemoButton = styled.a`
 display: flex;
@@ -166,7 +157,6 @@ margin-top: 20px;
   box-shadow: 0px 0px 15px 2px rgba(224,224,224,1);
 
 }
-
 `;
 
 const SoonButton = styled.div`

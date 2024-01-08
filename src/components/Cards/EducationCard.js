@@ -11,7 +11,7 @@ const Document = styled.img`
         cursor: pointer;
         opacity: 0.8;
     }
-`
+`;
 
 const Description = styled.div`
     width: 100%;
@@ -22,7 +22,7 @@ const Description = styled.div`
     @media only screen and (max-width: 768px){
         font-size: 12px;
     }
-`
+`;
 
 const Span = styled.span`
 overflow: hidden;
@@ -65,13 +65,13 @@ const Card = styled.div`
 
     }
     border: 0.1px solid #854CE6;
-`
+`;
 
 const Top = styled.div`
     width: 100%;
     display: flex;
     gap: 12px
-`
+`;
 
 const Image = styled.img`
     height: 50px;
@@ -81,13 +81,13 @@ const Image = styled.img`
     @media only screen and (max-width: 768px){
         height: 40px;
     }
-`
+`;
 
 const Body = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column; 
-`
+`;
 
 
 const Name = styled.div`

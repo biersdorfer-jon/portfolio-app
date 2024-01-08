@@ -10,7 +10,6 @@ export const darkTheme = {
     white: "#FFFFFF",
     black: "#000000",
     wrapperbg: "rgb(86,0,126)",
-    // wrapperbg_secondary: "radial-gradient(circle, rgba(86,0,126,1) 0%, rgba(28,28,39,1) 25%)",
     wrapperbg_secondary: "radial-gradient(circle, rgba(86,0,126,1) 0%, #191924 25%)",
     img: "JB LOGO W.png",
     glow: "#854CE6",

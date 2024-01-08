@@ -22,7 +22,6 @@ import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
   }
   z-index: 1;
 
-  // clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
 
  const HeroBg = styled.div`
@@ -154,9 +153,6 @@ import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
 
  const Span = styled.span`
   color: ${({ theme }) => theme.primary};
-  // background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
   cursor: pointer;
 `;
 
@@ -183,7 +179,6 @@ const ButtonContainerPC = styled.div`
   width: 100%;
   @media (max-width: 960px) {
     display: none;
-    
   }
 `;
 
@@ -203,6 +198,11 @@ const Button = styled.a`
   align-items: center;
   cursor: pointer;
 
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+    filter: brightness(1);
+    }    
 
 `;
 
@@ -224,8 +224,6 @@ const Button = styled.a`
     background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
     background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
     background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    // box-shadow:  20px 20px 60px #1F2634,
-    // -20px -20px 60px #1F2634;
     &:hover {
         transform: scale(1.05);
     transition: all 0.4s ease-in-out;
@@ -288,7 +286,7 @@ const Hero = () => {
                         typeSpeed={90}
                         deleteSpeed={80}
                         delaySpeed={1500}
-          />
+                        />
                         </Span>
                     </TextLoop>
                 <SubTitle>{Bio.description}</SubTitle>

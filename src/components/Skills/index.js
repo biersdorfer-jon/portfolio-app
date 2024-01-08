@@ -24,7 +24,7 @@ gap: 12px;
 @media (max-width: 960px) {
     flex-direction: column;
 }
-`
+`;
 
 const Title = styled.div`
 font-size: 42px;
@@ -74,7 +74,6 @@ const Skill = styled.div`
     transition: 0.2s ease-in-out;
     transform: translateY(-10px);
     transform: scale(1.05);
-    //box-shadow: 0px 0px 15px 4px rgba(133,76,230,1);
   }
 
   @media (max-width: 768px) {
@@ -134,11 +133,6 @@ const SkillItem = styled.div`
     padding: 6px 12px;
   `;
 
-  const SkillImage =styled.img`
-    width: 40px;
-    height: 40px;
-  `;
-
 const Skills = () => { 
 
   return (
@@ -146,7 +140,7 @@ const Skills = () => {
       <Wrapper>
         <Title>Skills</Title>
         <Description>
-          Here are some skills I have been improving over the past few years.
+          Depicted below are various skills I have been improving over the recent years.
         </Description>
         <SkillsContainer>
         {skills.map((skill) => (
@@ -156,7 +150,6 @@ const Skills = () => {
                 {
                   skill.skills.map((item) => (
                     <SkillItem>
-                      {/* <SkillImage src={item.image} /> */}
                       {React.createElement(item.icon, {size: 35})}
                       {item.name}
                     </SkillItem>

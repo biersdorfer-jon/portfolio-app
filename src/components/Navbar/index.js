@@ -93,52 +93,6 @@ font-size: 19px;
 }
 `;
 
-const ButtonContainer = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-width: 30%;
-height: 100%;
-padding: 0 6px;
-@media screen and (max-width: 768px) {
-  display: none;
-}
-// @media screen and (max-width: 1200px) {
-//   width: 70%;
-}
-`
-const GithubButton = styled.a`
-background-color: transparent;
-color: ${({ theme }) => theme.primary};
-border: 1.8px solid ${({ theme }) => theme.primary};
-border-radius: 20px;
-display: flex;
-gap: 8px;
-justify-content: center;
-align-items: center;
-text-decoration: none;
-padding: 0px 50px;
-font-size: 1rem;
-cursor: pointer;
-height: 70%;
-
-&:hover {
-  background-color: ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.white};
-}
-@media screen and (max-width: 850px) {
-padding: 0px 35px;
-}
-
-`;
-
-const Span = styled.span`
-  padding: 0 4px;
-  font-weight: bold;
-  font-size: 18px;
-  color: ${({ theme }) => theme.text_primary};
-`
-
 const MobileMenu = styled.div`
   display: flex;
   flex-direction: column;
@@ -156,7 +110,8 @@ border-radius: 0 0 20 20px;
 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 opacity: ${({ open }) => (open ? "1" : "0")};
 z-index: ${({ open }) => (open ? "1" : "-1")};
-`
+`;
+
 const MobileLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
@@ -246,7 +201,6 @@ const Navbar = (props) => {
 <ImageContainer>
       <a href="#about">
               <Image src={require(`../../images/${theme.img}`)}/>
-              {/* <Span>Portfolio</Span> */}
               </a>
               </ImageContainer>
       <MobileIcon>
@@ -263,11 +217,6 @@ const Navbar = (props) => {
         <NavLink href='#projects'>Projects</NavLink>
         <NavLink href='#education'>Education</NavLink>
       </NavItems>
-      {/* <ButtonContainer>
-        <GithubButton href={Bio.github}
-            target="_blank"><FaGithub />Github</GithubButton>
-            
-      </ButtonContainer> */}
       <ToggleContainer>
       <Toggle onClick={changeTheme}>
               {icon}

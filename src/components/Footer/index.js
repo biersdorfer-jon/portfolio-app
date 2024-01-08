@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-import { keyframes } from 'styled-components';
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { Bio } from '../../data/constants';
 import { FaPhone } from "react-icons/fa6";
@@ -56,9 +55,6 @@ const Name = styled.h1`
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 8px;
-    // text-shadow: 0 0 10px ${({ theme }) => theme.glow},
-    // 0 0 20px ${({ theme }) => theme.glow},
-    // 0 0 40px ${({ theme }) => theme.glow};
 
     @media (max-width: 845px) {
         font-size: 16px;
@@ -69,11 +65,6 @@ const Name = styled.h1`
         width: 100%;
         padding: 12px 0px;
     }
-    
-
-    
-    
-    
 `;
 
 
@@ -134,9 +125,7 @@ const Button = styled.a`
 `;
 
 const MobileContainer = styled.div`
-    
 display: none;
-
     @media (max-width: 768px) {
         display: flex;
         flex-direction: column;

@@ -11,7 +11,6 @@ justify-content: center;
 position: relative;
 z-index: 1;
 align-items: center;
-// clip-path: polygon(0 0 , 100% 0, 100% 100%, 100% 98%, 0 100%);
 margin-top: 20px;
 padding-top: 60px;
 `;
@@ -107,13 +106,12 @@ const CardContainer = styled.div`
 
 const Projects = () => {
   const [toggle, setToggle] = useState("all");
-  const categories = [...new Set(projects.flatMap(project => project.category))];
   return (
     
     <Container id="projects">
         <Wrapper>
             <Title>Projects</Title>
-            <Description>Here are some of my projects.</Description>
+            <Description>Here are some of my projects I have completed or are currently working on.</Description>
 
             <ToggleGroup>
               {toggle === "all" ? (
