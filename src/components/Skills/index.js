@@ -10,6 +10,8 @@ position: relative;
 z-index: 1;
 align-items: center;
 padding-top: 60px;
+background: #854CE6B3;
+padding-bottom: 80px;
 `;
 
 const Wrapper = styled.div`
@@ -64,8 +66,8 @@ const SkillsContainer = styled.div`
 const Skill = styled.div`
   width: 100%;
   max-width: 400px;
-  background-color: ${({ theme }) => theme.card};
-  border: 0.1px solid #854CE6;
+  background-color: ${({ theme }) => theme.skill};
+  border: 0.1px solid #6C33CD;
   border-radius: 16px;
   padding: 16px 36px;
   transition: 0.2s ease-in-out;
@@ -74,6 +76,7 @@ const Skill = styled.div`
     transition: 0.2s ease-in-out;
     transform: translateY(-10px);
     transform: scale(1.05);
+    filter: brightness(${({ theme }) => theme.brightness});
   }
 
   @media (max-width: 768px) {

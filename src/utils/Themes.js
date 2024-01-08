@@ -3,7 +3,7 @@ export const darkTheme = {
     bgLight: "#1C1E27",
     primary: "#854CE6",
     text_primary: "#F2F3F4",
-    text_secondary: "#b1b2b3",
+    text_secondary: "#C0C1C2",
     card: "#171721",
     card_light: "#191924",
     button: "#854CE6",
@@ -13,6 +13,10 @@ export const darkTheme = {
     wrapperbg_secondary: "radial-gradient(circle, rgba(86,0,126,1) 0%, #191924 25%)",
     img: "JB LOGO W.png",
     glow: "#854CE6",
+    brightness: "1.2",
+    card_bg: "#562E9E",
+    skill: "#171721",
+    
 };
 
 export const lightTheme = {
@@ -20,7 +24,7 @@ export const lightTheme = {
     bgLight: "#fef5ff",
     primary: "#854CE6",
     text_primary: "#111111",
-    text_secondary: "#363738",
+    text_secondary: "#2E2F30",
     card: "#fef5ff",
     button: "#5c5b5b",
     white: "#FFFFFF",
@@ -29,4 +33,7 @@ export const lightTheme = {
     wrapperbg_secondary: "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(254,245,255,1) 35%)",
     img: "JB LOGO B.png",
     glow: "#854CE6",
+    brightness: "1",
+    card_bg: "#C398FF",
+    skill: "#FFF1FF",
 };

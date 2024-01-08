@@ -36,7 +36,7 @@ const Card =styled.div`
         
         transition: all ease-in-out 0.3s;
         ${ProjectImage} {
-            filter: brightness(0.7); /* Adjust the brightness value for darkening */
+            filter: brightness(${({ theme }) => theme.brightness}); /* Adjust the brightness value for darkening */
         }
     }
 

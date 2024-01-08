@@ -28,9 +28,6 @@ const Span = styled.span`
 overflow: hidden;
 display: -webkit-box;
 max-width: 100%;
-// -webkit-line-clamp: 4;
-// -webkit-box-orient: vertical;
-// text-overflow: ellipsis;
 `
 
 const Card = styled.div`
@@ -42,6 +39,7 @@ const Card = styled.div`
     position: relative;
     overflow: hidden;
     display: flex;
+    background: ${({ theme }) => theme.card_bg};
     flex-direction: column;
     gap: 12px;
     transition: all 0.3s ease-in-out;

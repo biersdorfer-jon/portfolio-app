@@ -20,7 +20,9 @@ const Container = styled.div`
     z-index: 1;
     align-items: center;
     padding: 0px 0px 60px 0px;
-    padding-top: 60px;
+    padding-top: 40px;
+    background: #854CE6B3;
+
     @media (max-width: 768px) {
         padding: 30px;
     }
