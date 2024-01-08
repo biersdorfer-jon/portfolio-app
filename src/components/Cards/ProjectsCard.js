@@ -36,7 +36,7 @@ const Card =styled.div`
         
         transition: all ease-in-out 0.3s;
         ${ProjectImage} {
-            filter: brightness(${({ theme }) => theme.brightness}); /* Adjust the brightness value for darkening */
+            filter: brightness(${({ theme }) => theme.brightness}); 
         }
     }
 
@@ -135,6 +135,10 @@ text-decoration: none;
   box-shadow: 0px 0px 15px 2px rgba(224,224,224,1);
 
 }
+
+@media (max-width: 600px) {
+    margin-top: 8px;
+}
 `;
 const DemoButton = styled.a`
 display: flex;
@@ -158,6 +162,10 @@ text-decoration: none;
   box-shadow: 0px 0px 15px 2px rgba(224,224,224,1);
 
 }
+
+@media (max-width: 600px) {
+    margin-top: 8px;
+}
 `;
 
 const SoonButton = styled.div`
@@ -172,6 +180,11 @@ border-radius: 12px;
 padding: 12px 14px;
 font-weight: 400;
 margin-top: 20px;
+
+@media (max-width: 600px) {
+    margin-top: 8px;
+}
+
 `;
 
 
