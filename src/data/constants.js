@@ -157,7 +157,7 @@ export const skills = [
 
       category: "frontend",
       github: "https://github.com/biersdorfer-jon/portfolio-app",
-      web: "",
+      web: "https://biersdorfer-jon.netlify.app/",
     },
      {
        id: 2,

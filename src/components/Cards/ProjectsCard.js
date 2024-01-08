@@ -149,6 +149,7 @@ padding: 12px 14px;
 font-weight: 400;
 width: 45%;
 margin-top: 20px;
+text-decoration: none;
 
 &:hover {
   transition: 0.2s ease-in-out;
@@ -197,7 +198,7 @@ const ProjectsCard = ({project}) => {
         <SoonButton>Coming Soon</SoonButton>
       )}
       {project.github ? (
-            <DemoButton>
+            <DemoButton href={project.web} target="_blank">
                 <BsBoxArrowUpLeft />Live Demo
             </DemoButton>
             ) : (<></>
