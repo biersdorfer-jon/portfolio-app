@@ -104,9 +104,8 @@ const MobileMenu = styled.div`
   width: 100%;
   padding: 12px 40px 24px 40px;
   background: ${({ theme }) => theme.card_light+99};
-  transition: all 2s ease-in-out;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
-border-radius: 0 0 20 20px;
+  transition: all 0.3s ease-in-out;
+  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};  
 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 opacity: ${({ open }) => (open ? "1" : "0")};
 z-index: ${({ open }) => (open ? "1" : "-1")};

@@ -14,10 +14,14 @@ export const Bio = {
         "Web Designer",
     ],
 
-    description: "Mastering the art of code, our web developer seamlessly blends creativity and technical prowess. Proficient in HTML, CSS, and JavaScript, they craft sleek, user-friendly websites that captivate and inspire. Ready for fresh challenges, our web wizard is the architect of online experiences that leave a lasting impact.",
+    description: "In recent years, I've been dedicated to evolving my developer skills. This portfolio showcases the various expertise I've cultivated and features projects I've independently created. If you're left with questions about my developer journey, click the buttons below for more insights and a deeper understanding of who I am!",
     github: "https://github.com/biersdorfer-jon",
     insta: "https://www.instagram.com/biersdorfer.jon",
     linkedin: "https://www.linkedin.com/in/jon-biersdorfer/",
+    subtitle: "A responsive portflio website showcasing the advanced skill set I have developed over recent years.",
+    title: "Jon Biersdorfer",
+    image: "portfolio.png",
+    path: "https://biersdorfer-jon.netlify.app/",
 };
 
 export const skills = [
