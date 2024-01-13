@@ -165,7 +165,7 @@ export const skills = [
     },
      {
        id: 2,
-       title:"Apparal Ecommerce Site",
+       title:"Apparel Ecommerce Site",
        date: "Coming Soon",
        description: "A full-stack athletic apparel store, optimizing database performance for a seamless and dynamic eCommerce experience.",
        image: "RTG1.png",
