@@ -163,8 +163,30 @@ export const skills = [
       github: "https://github.com/biersdorfer-jon/portfolio-app",
       web: "https://biersdorfer-jon.netlify.app/",
     },
+
+    {
+      id: 2,
+      title:"Real Estate Page",
+      date: "Jan 2024",
+      description: "A smooth landing page built for a team of agents showcasing their accolades and providing easily accessible contact methods.",
+      image: "logoBlackRed2.png",
+      tags: [
+        "React js",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Next Js",
+        "Node Js",
+        "Email Js",
+      ],
+
+      category: "frontend",
+      github: "https://github.com/biersdorfer-jon/emma",
+      web: "https://biersdorfer-mccoy.netlify.app/",
+    },
+
      {
-       id: 2,
+       id: 3,
        title:"Apparel Ecommerce Site",
        date: "Coming Soon",
        description: "A full-stack athletic apparel store, optimizing database performance for a seamless and dynamic eCommerce experience.",
@@ -186,7 +208,7 @@ export const skills = [
      },
 
      {
-      id: 3,
+      id: 4,
       title:"Honors Class Page",
       date: "Coming Soon",
       description: "A full-stack honors class website with student biographies offering a detailed glimpse into their achievements and aspirations.",
