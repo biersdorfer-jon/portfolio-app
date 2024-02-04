@@ -26,7 +26,7 @@ export const Bio = {
 
 export const skills = [
     {
-      title: "Frontend",
+      title: "Front End",
       skills: [
         {
           name: "React Js",
@@ -66,7 +66,7 @@ export const skills = [
       ],
     },
     {
-      title: "Backend",
+      title: "Back End",
       skills: [
         {
           name: "Node Js",

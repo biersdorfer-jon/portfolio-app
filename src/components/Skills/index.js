@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import { skills } from '../../data/constants';
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
 
 const Container = styled.div`
 display: flex;
@@ -138,16 +141,95 @@ const SkillItem = styled.div`
 
 const Skills = () => { 
 
+  gsap.registerPlugin(ScrollTrigger);
+
+    useEffect(() => {
+      const animateElements = (startPoint, endPoint) => {
+        
+        gsap.fromTo(
+          '.skillSection', // Target element or class
+        {
+          opacity: 0,
+          transform: 'translateX(-600px)', // Optional: Set the initial transform for animation
+        },
+        {
+          opacity: 1,
+          transform: 'translateX(0)', // Optional: Set the final transform for animation
+          duration: 5,
+          scrollTrigger: {
+            trigger: '.skillSection',
+            start: startPoint, // Adjust the start position as needed
+          end: endPoint,  // Adjust the end position as needed
+            scrub: 1, // Adjust the scrub value for smoother animation
+            toggleActions: 'play none none none', // Adjust toggle actions as needed
+          },
+        }
+        );
+
+        gsap.fromTo(
+          '.skill', // Target element or class
+        {
+          opacity: 0,
+          transform: 'translateY(60px)', // Optional: Set the initial transform for animation
+        },
+        {
+          opacity: 1,
+          transform: 'translateX(0)', // Optional: Set the final transform for animation
+          duration: 5,
+          scrollTrigger: {
+            trigger: '.skill',
+            start: startPoint, // Adjust the start position as needed
+          end: endPoint,  // Adjust the end position as needed
+            scrub: 1, // Adjust the scrub value for smoother animation
+            toggleActions: 'play none none none', // Adjust toggle actions as needed
+          },
+        }
+        );
+      };
+  
+      // Media query for screens with a maximum width of 500px
+      const mediaQuery500 = window.matchMedia('(max-width: 500px)');
+      if (mediaQuery500.matches) {
+        animateElements('top 100%', 'top 80%');
+      }
+  
+      // Media query for screens with a minimum width of 501px
+      const mediaQuery501 = window.matchMedia('(min-width: 501px)');
+      if (mediaQuery501.matches) {
+        animateElements('top 90%', 'bottom 80%');
+      }
+  
+      // Event listener for changes in media query status
+      const handleMediaQueryChange = (event) => {
+        if (event.matches) {
+          // Media query matches, apply animations
+          animateElements('top 100%', 'top 80%');
+        } else {
+          animateElements('top 90%', 'bottom 100%');
+        }
+      };
+  
+      // Add event listener for media query changes
+      mediaQuery500.addListener(handleMediaQueryChange);
+      mediaQuery501.addListener(handleMediaQueryChange);
+  
+      // Clean up event listeners on component unmount
+      return () => {
+        mediaQuery500.removeListener(handleMediaQueryChange);
+        mediaQuery501.removeListener(handleMediaQueryChange);
+      };
+    }, []);
+
   return (
     <Container id="skills">
-      <Wrapper>
-        <Title>Skills</Title>
-        <Description>
+      <Wrapper >
+        <Title className='skillSection'>Skills</Title>
+        <Description className='skillSection'>
           Depicted below are various skills I have been improving over the recent years.
         </Description>
-        <SkillsContainer>
+        <SkillsContainer className='skill'>
         {skills.map((skill) => (
-            <Skill>
+            <Skill >
               <SkillTitle>{skill.title}</SkillTitle>
               <SkillList>
                 {

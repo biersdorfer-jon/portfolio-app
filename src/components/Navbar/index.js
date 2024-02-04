@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled, { useTheme } from 'styled-components';
 import { FaBars } from "react-icons/fa";
 import { Bio } from '../../data/constants';
 import { CgSun } from "react-icons/cg";
 import { HiMoon } from "react-icons/hi";
 import { FaGithub } from 'react-icons/fa6';
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 
 const Nav = styled.div`
@@ -30,6 +32,7 @@ const NavContainer = styled.div`
   height: 60px;
   z-index: 1;
   width: 100%;
+  opacity: 0;
   padding: 0 24px;
   max-width: 1200px;
 `;
@@ -194,9 +197,25 @@ const Navbar = (props) => {
 
   const icon = props.theme === "light" ? <HiMoon size={30} /> : <CgSun size={30} />
 
+
+  useEffect(() => {
+    // Animation timeline
+    const tl = gsap.timeline();
+    // Initial state (hidden)
+    tl.set('.nav', { opacity: 0, x: '-100%' });
+
+    // Animation to bring the Container in from the left
+    tl.to('.nav', { duration: 2, opacity: 1, x: '0', ease: 'power4.out' });
+
+    // You can adjust the delay according to your needs
+    tl.delay(.5); // Wait for 1 second after the page fully loads before starting the animation
+  }, []); // Empty dependency array ensures the effect runs only once after initial render
+  
+  // ... rest of your code ...
+
   return (
     <Nav>
-      <NavContainer>
+      <NavContainer className='nav'>
 <ImageContainer>
       <a href="#about">
               <Image src={require(`../../images/${theme.img}`)}/>

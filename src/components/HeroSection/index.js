@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import { Bio } from "../../data/constants";
 import { Typewriter } from 'react-simple-typewriter';
@@ -6,6 +6,8 @@ import HeroImg from "../../images/Hero3.jpg";
 import HeroBgAnimation from '../../HeroBgAnimation';
 import Resume from '../../images/Resume - Jon Biersdorfer.pdf';
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 
  const HeroContainer = styled.div`
@@ -14,6 +16,7 @@ import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
   justify-content: center;
   position: relative;
   padding: 80px 30px;
+  opacity: 0;
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
@@ -25,22 +28,21 @@ import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
 `;
 
  const HeroBg = styled.div`
-  position: absolute;
-  display: flex;
-  justify-content: end;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  max-width: 1360px;
-  overflow: hidden;
-  padding: 0 30px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+ position: absolute;
+ display: flex;
+ justify-content: end;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ max-width: 1360px;
+ overflow: hidden;
+ padding: 0 30px;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
 
   @media (max-width: 960px) {
     justify-content: center;
@@ -265,14 +267,31 @@ const Socials = styled.div`
 
 
 const Hero = () => {
+
+  useEffect(() => {
+    // Animation timeline
+    const tl = gsap.timeline();
+    // Initial state (hidden)
+    tl.set('.left', { opacity: 0, x: '-100%' });
+
+    // Animation to bring the Container in from the left
+    tl.to('.left', { duration: 2, opacity: 1, x: '0', ease: 'power4.out' });
+
+    // You can adjust the delay according to your needs
+    tl.delay(2); // Wait for 1 second after the page fully loads before starting the animation
+  }, []); // Empty dependency array ensures the effect runs only once after initial render
+  
+  // ... rest of your code ...
+
+
   return (
     <div id="about">
-        <HeroContainer>
+        <HeroContainer className='left'>
             <HeroBg>
                 <HeroBgAnimation />
             </HeroBg>
             <HeroInnerContainer>
-                <HeroLeftContainer>
+                <HeroLeftContainer >
                     <Title>Hi, I am <br />
                     {Bio.name}</Title>
                     <TextLoop>

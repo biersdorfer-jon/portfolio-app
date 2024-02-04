@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ProjectsCard from '../Cards/ProjectsCard';
 import { projects } from '../../data/constants';
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const Container = styled.div`
 background: transparent;
@@ -107,14 +109,94 @@ const CardContainer = styled.div`
 
 const Projects = () => {
   const [toggle, setToggle] = useState("all");
+
+  gsap.registerPlugin(ScrollTrigger);
+
+    useEffect(() => {
+      const animateElements = (startPoint, endPoint) => {
+        
+        gsap.fromTo(
+          '.projectSection', // Target element or class
+        {
+          opacity: 0,
+          transform: 'translateX(-600px)', // Optional: Set the initial transform for animation
+        },
+        {
+          opacity: 1,
+          transform: 'translateX(0)', // Optional: Set the final transform for animation
+          duration: 5,
+          scrollTrigger: {
+            trigger: '.projectSection',
+            start: startPoint, // Adjust the start position as needed
+          end: endPoint,  // Adjust the end position as needed
+            scrub: 1, // Adjust the scrub value for smoother animation
+            toggleActions: 'play none none none', // Adjust toggle actions as needed
+          },
+        }
+        );
+
+        gsap.fromTo(
+          '.project', // Target element or class
+        {
+          opacity: 0,
+          transform: 'translateY(60px)', // Optional: Set the initial transform for animation
+        },
+        {
+          opacity: 1,
+          transform: 'translateX(0)', // Optional: Set the final transform for animation
+          duration: 5,
+          scrollTrigger: {
+            trigger: '.project',
+            start: startPoint, // Adjust the start position as needed
+          end: endPoint,  // Adjust the end position as needed
+            scrub: 1, // Adjust the scrub value for smoother animation
+            toggleActions: 'play none none none', // Adjust toggle actions as needed
+          },
+        }
+        );
+      };
+  
+      // Media query for screens with a maximum width of 500px
+      const mediaQuery500 = window.matchMedia('(max-width: 500px)');
+      if (mediaQuery500.matches) {
+        animateElements('top 100%', 'top 80%');
+      }
+  
+      // Media query for screens with a minimum width of 501px
+      const mediaQuery501 = window.matchMedia('(min-width: 501px)');
+      if (mediaQuery501.matches) {
+        animateElements('top 90%', 'bottom 80%');
+      }
+  
+      // Event listener for changes in media query status
+      const handleMediaQueryChange = (event) => {
+        if (event.matches) {
+          // Media query matches, apply animations
+          animateElements('top 100%', 'top 80%');
+        } else {
+          animateElements('top 90%', 'bottom 100%');
+        }
+      };
+  
+      // Add event listener for media query changes
+      mediaQuery500.addListener(handleMediaQueryChange);
+      mediaQuery501.addListener(handleMediaQueryChange);
+  
+      // Clean up event listeners on component unmount
+      return () => {
+        mediaQuery500.removeListener(handleMediaQueryChange);
+        mediaQuery501.removeListener(handleMediaQueryChange);
+      };
+    }, []);
+
   return (
     
     <Container id="projects">
         <Wrapper>
-            <Title>Projects</Title>
-            <Description>Here are some of my projects I have completed or are currently working on.</Description>
-
-            <ToggleGroup>
+            <Title className='projectSection'>Projects</Title>
+            <Description className='projectSection'>Here are some of my projects I have completed or are currently working on.</Description>
+            
+            <ToggleGroup className='project'>
               {toggle === "all" ? (
                 <ToggleButton active value="all" onClick={() => setToggle('all')}>
                   ALL
@@ -144,7 +226,7 @@ const Projects = () => {
                 )}
             </ToggleGroup>
 
-            <CardContainer>
+            <CardContainer className='project'>
   {toggle === "all" 
     ? projects.map((project) => (
         <ProjectsCard key={project.id} project={project} />

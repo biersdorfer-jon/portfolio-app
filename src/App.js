@@ -24,7 +24,7 @@ height: 100%;
 
 function App() {
 
-  const [theme, setTheme] = useState("dark")
+  const [theme, setTheme] = useState("light")
   return (
     <ThemeProvider theme={themes[theme]}> 
       <Router>
