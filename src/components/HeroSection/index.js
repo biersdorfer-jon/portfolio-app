@@ -275,7 +275,7 @@ const Hero = () => {
     tl.set('.left', { opacity: 0, x: '-100%' });
 
     // Animation to bring the Container in from the left
-    tl.to('.left', { duration: 2, opacity: 1, x: '0', ease: 'power4.out' });
+    tl.to('.left', { duration: 4, opacity: 1, x: '0', ease: 'power4.out' });
 
     // You can adjust the delay according to your needs
     tl.delay(2); // Wait for 1 second after the page fully loads before starting the animation
