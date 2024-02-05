@@ -35,9 +35,6 @@ const Card =styled.div`
         box-shadow: 0 0 12px 4px rgba(0,0,0,0.6);
         
         transition: all ease-in-out 0.3s;
-        ${ProjectImage} {
-            filter: brightness(${({ theme }) => theme.brightness}); 
-        }
     }
 
 `;

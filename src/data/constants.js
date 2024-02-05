@@ -157,6 +157,7 @@ export const skills = [
         "CSS",
         "Next Js",
         "Node Js",
+        "GSAP",
       ],
 
       category: "frontend",
@@ -178,6 +179,7 @@ export const skills = [
         "Next Js",
         "Node Js",
         "Email Js",
+        "GSAP",
       ],
 
       category: "frontend",
