@@ -165,7 +165,7 @@ const Projects = () => {
       // Media query for screens with a minimum width of 501px
       const mediaQuery501 = window.matchMedia('(min-width: 501px)');
       if (mediaQuery501.matches) {
-        animateElements('top 90%', 'bottom 80%');
+        animateElements('top 90%', 'top 70%');
       }
   
       // Event listener for changes in media query status
@@ -174,7 +174,7 @@ const Projects = () => {
           // Media query matches, apply animations
           animateElements('top 100%', 'top 80%');
         } else {
-          animateElements('top 90%', 'bottom 100%');
+          animateElements('top 90%', 'top 70%');
         }
       };
   
