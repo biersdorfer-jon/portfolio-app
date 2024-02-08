@@ -164,6 +164,31 @@ text-decoration: none;
 
 `;
 
+const SeeButton = styled.a`
+display: flex;
+gap: 8px;
+justify-content: center;
+align-items: center;
+font-size: 16px;
+color: ${({ theme }) => theme.text_secondary};
+border: 1px solid ${({ theme }) => theme.text_primary + 80};
+border-radius: 12px;
+padding: 12px 14px;
+font-weight: 400;
+width: 45%;
+margin-top: 5px;
+text-decoration: none;
+
+&:hover {
+  transition: 0.2s ease-in-out;
+  transform: translateY(-10px);
+  transform: scale(1.04);
+  box-shadow: 0px 0px 15px 2px rgba(224,224,224,1);
+
+}
+
+`;
+
 const SoonButton = styled.div`
     width: 80%;
     display: flex;
@@ -203,14 +228,24 @@ const ProjectsCard = ({project}) => {
         <GithubButton href={project.github} target="_blank">
           <FaGithub /> Github
         </GithubButton>
-      ) : (
-        <SoonButton>Coming Soon</SoonButton>
+      ) : (<></>
       )}
-      {project.github ? (
+      {project.web ? (
             <DemoButton href={project.web} target="_blank">
                 <BsBoxArrowUpLeft />Live Demo
             </DemoButton>
             ) : (<></>
+                )}
+    {project.see ? (
+            <SeeButton href={project.see} target="_blank">
+                <BsBoxArrowUpLeft />See More
+            </SeeButton>
+            ) : (<></>
+                )}
+
+{project.see || project.github || project.web ? ( <div></div>
+            ) : (
+            <SoonButton>Coming Soon</SoonButton>
                 )}
             </ButtonContainer>
             </Details>

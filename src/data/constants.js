@@ -147,7 +147,7 @@ export const skills = [
     {
       id: 1,
       title: "Portfolio",
-      date: "Nov 2023",
+      date: "Dec 2023",
       description: "A fully responsive portfolio website introducing myself while showcasing several of my skill sets and my various projects.",
       image: "portfolio.png",
       tags: [
@@ -187,8 +187,30 @@ export const skills = [
       web: "https://biersdorfer-mccoy.com",
     },
 
+    {
+      id: 3,
+      title:"College Registration Portal",
+      date: "Oct 2023",
+      description: "A comprehensive college registration platform allowing users have the ability to effortlessly manage their class schedules.",
+      image: "college.png",
+      tags: [
+        "React js",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Next Js",
+        "Node Js",
+        "MySQL",
+        "PHP",
+      ],
+
+      category: "backend",
+      github: "https://github.com/biersdorfer-jon/Login",
+      web: "",
+    },
+
      {
-       id: 3,
+       id: 4,
        title:"Apparel Ecommerce Site",
        date: "Coming Soon",
        description: "A full-stack athletic apparel store, optimizing database performance for a seamless and dynamic eCommerce experience.",
@@ -210,7 +232,7 @@ export const skills = [
      },
 
      {
-      id: 4,
+      id: 5,
       title:"Honors Class Page",
       date: "Coming Soon",
       description: "A full-stack honors class website with student biographies offering a detailed glimpse into their achievements and aspirations.",
@@ -229,6 +251,23 @@ export const skills = [
       category: "backend",
       github: "",
       web: "",
+    },
+
+    {
+      id: 6,
+      title:"Merch Design",
+      date: "Jan 2024",
+      description: "A collection showcasing  a diverse array of clothing designs and mockups featuring logos across various apparel styles.",
+      image: "college.png",
+      tags: [
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+      ],
+
+      category: "design",
+      github: "",
+      web: "",
+      see: "biersdorfer-jon.com",
     },
 
   ];
