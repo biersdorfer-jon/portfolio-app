@@ -12,6 +12,7 @@ export const Bio = {
         "Front End Developer",
         "Back End Developer",
         "Web Designer",
+        "Graphic Designer",
     ],
 
     description: "In recent years, I've been dedicated to evolving my developer skills. This portfolio showcases the various expertise I've cultivated and features projects I've independently created. If you're left with questions about my developer journey, click the buttons below for more insights and a deeper understanding of who I am!",
@@ -21,7 +22,7 @@ export const Bio = {
     subtitle: "A responsive portflio website showcasing the advanced skill set I have developed over recent years.",
     title: "Jon Biersdorfer",
     image: "portfolio.png",
-    path: "https://biersdorfer-jon.netlify.app/",
+    path: "https://biersdorfer-jon.com",
 };
 
 export const skills = [
@@ -161,7 +162,7 @@ export const skills = [
 
       category: "frontend",
       github: "https://github.com/biersdorfer-jon/portfolio-app",
-      web: "https://biersdorfer-jon.netlify.app/",
+      web: "https://biersdorfer-jon.com",
     },
 
     {
@@ -205,9 +206,30 @@ export const skills = [
       github: "https://github.com/biersdorfer-jon/Login",
       web: "",
     },
+    {
+      id: 4,
+      title:"Honors Class Page",
+      date: "Coming Soon",
+      description: "A full-stack honors class website with student biographies offering a detailed glimpse into their achievements and aspirations.",
+      image: "Honors.png",
+      tags: [
+        "React Js",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Next Js",
+        "MySQL",
+        "PHP",
+      ],
+
+      category: "backend",
+      github: "",
+      web: "",
+      progress: "https://github.com/biersdorfer-jon.com",
+    },
 
      {
-       id: 4,
+       id: 5,
        title:"Apparel Ecommerce Site",
        date: "Coming Soon",
        description: "A full-stack athletic apparel store, optimizing database performance for a seamless and dynamic eCommerce experience.",
@@ -226,38 +248,20 @@ export const skills = [
        category: "backend",
        github: "",
        web: "",
+       progress: "https://github.com/biersdorfer-jon/RTGadmin",
      },
 
-     {
-      id: 5,
-      title:"Honors Class Page",
-      date: "Coming Soon",
-      description: "A full-stack honors class website with student biographies offering a detailed glimpse into their achievements and aspirations.",
-      image: "Honors.png",
-      tags: [
-        "React Js",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Next Js",
-        "MySQL",
-        "PHP",
-      ],
-
-      category: "backend",
-      github: "",
-      web: "",
-    },
 
     {
       id: 6,
       title:"Merch Design",
       date: "Jan 2024",
       description: "A collection showcasing  a diverse array of clothing designs and mockups featuring logos across various apparel styles.",
-      image: "college.png",
+      image: "merch1.png",
       tags: [
         "Adobe Photoshop",
         "Adobe Illustrator",
+        "Adobe Fonts",
       ],
 
       category: "design",

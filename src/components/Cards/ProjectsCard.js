@@ -189,9 +189,10 @@ text-decoration: none;
 
 `;
 
-const SoonButton = styled.div`
+const SoonButton = styled.a`
     width: 80%;
     display: flex;
+    gap: 8px;
     justify-content: center;
     align-items: center;
     font-size: 16px;
@@ -201,6 +202,14 @@ border-radius: 12px;
 padding: 12px 14px;
 font-weight: 400;
 margin-top: 5px;
+text-decoration: none;
+&:hover {
+    transition: 0.2s ease-in-out;
+    transform: translateY(-10px);
+    transform: scale(1.04);
+    box-shadow: 0px 0px 15px 2px rgba(224,224,224,1);
+  
+  }
 
 
 `;
@@ -245,7 +254,7 @@ const ProjectsCard = ({project}) => {
 
 {project.see || project.github || project.web ? ( <div></div>
             ) : (
-            <SoonButton>Coming Soon</SoonButton>
+            <SoonButton href={project.progress} target='_blank'> <FaGithub />View Current Progress</SoonButton>
                 )}
             </ButtonContainer>
             </Details>
