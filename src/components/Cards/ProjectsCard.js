@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaGithub } from "react-icons/fa";
 import { BsBoxArrowUpLeft } from "react-icons/bs";
-import Merch from '../../images/Merch.pdf';
+import Merch from '../../images/Merch Design.pdf';
 
 
 
