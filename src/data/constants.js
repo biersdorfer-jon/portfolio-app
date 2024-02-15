@@ -2,8 +2,9 @@ import { TbBrandNextjs, TbBrandVscode } from "react-icons/tb";
 import { FaReact, FaHtml5, FaCss3Alt, FaSass, FaPython, FaPhp, FaJava, FaNode, FaFigma, FaGithub } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io5";
 import { GrMysql } from "react-icons/gr";
-import { SiAdobephotoshop, SiAdobepremierepro } from "react-icons/si";
 import { BiLogoNetlify } from "react-icons/bi";
+import { SiAdobe } from "react-icons/si";
+
 
 export const Bio = {
     name: "Jon Biersdorfer 😁",
@@ -31,38 +32,27 @@ export const skills = [
       skills: [
         {
           name: "React Js",
-          image:
-            "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
             icon: FaReact, 
           },
         {
-            name: "Sass",
-            image:
-              "https://raw.githubusercontent.com/gilbarbara/logos/f133ea921b012052000964e3feb023b57146895b/logos/sass.svg",
-              icon: FaSass, 
-          },
-        {
-          name: "Next Js",
-          image:
-            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=",
-          icon: TbBrandNextjs, 
-          },
-        {
           name: "HTML",
-          image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
           icon: FaHtml5, 
         },
         {
           name: "CSS",
-          image:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
             icon: FaCss3Alt, 
         },
         {
           name: "JavaScript",
-          image:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
             icon: IoLogoJavascript, 
+        },
+        {
+          name: "Sass",
+            icon: FaSass, 
+        },
+      {
+        name: "Next Js",
+        icon: TbBrandNextjs, 
         },
       ],
     },
@@ -70,31 +60,23 @@ export const skills = [
       title: "Back End",
       skills: [
         {
-          name: "Node Js",
-          image: "https://nodejs.org/static/images/logo.svg",
-          icon: FaNode, 
-        },
-        {
           name: "Python",
-          image:
-            "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
             icon: FaPython, 
         },
         {
           name: "MySQL",
-          image:
-            "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
             icon: GrMysql, 
         },
         {
             name: "PHP",
-            image:"//www.php.net/images/logos/new-php-logo.svg",
             icon: FaPhp, 
         },
         {
+          name: "Node Js",
+          icon: FaNode, 
+        },
+        {
           name: "Java",
-          image:
-            "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
             icon: FaJava, 
         },
       ],
@@ -104,40 +86,23 @@ export const skills = [
       skills: [
         {
           name: "GitHub",
-          image:
-            "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
             icon: FaGithub, 
         },
         {
-          name: "Netlify",
-          image:
-            "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
-            icon: BiLogoNetlify, 
+          name: "Adobe Suite",
+          icon: SiAdobe, 
         },
-        {
-          name: "VS Code",
-          image:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
-            icon: TbBrandVscode, 
-        },
-        {
-          name: "Photoshop",
-          image:
-          "https://raw.githubusercontent.com/gilbarbara/logos/f133ea921b012052000964e3feb023b57146895b/logos/adobe-photoshop.svg",
-          icon: SiAdobephotoshop, 
-        },
-        {
-          name: "Premier Pro",
-          image:
-            "https://camo.githubusercontent.com/ed93c2b000a76ceaad1503e7eb9356591b885227e82a36a005b9d3498b303ba5/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6669676d612f6669676d612d69636f6e2e737667",
-            icon: SiAdobepremierepro, 
-          },
-    
         {
           name: "Figma",
-          image:
-            "https://camo.githubusercontent.com/ed93c2b000a76ceaad1503e7eb9356591b885227e82a36a005b9d3498b303ba5/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6669676d612f6669676d612d69636f6e2e737667",
             icon: FaFigma, 
+          },
+          {
+            name: "VS Code",
+              icon: TbBrandVscode, 
+          },
+          {
+            name: "Netlify",
+              icon: BiLogoNetlify, 
           },
       ],
     },
@@ -225,7 +190,7 @@ export const skills = [
       category: "backend",
       github: "",
       web: "",
-      progress: "https://github.com/biersdorfer-jon.com",
+      progress: "https://github.com/biersdorfer-jon",
     },
 
      {
@@ -257,17 +222,17 @@ export const skills = [
       title:"Merch Design",
       date: "Jan 2024",
       description: "A collection showcasing  a diverse array of clothing designs and mockups featuring logos across various apparel styles.",
-      image: "merch1.png",
+      image: "squad2.jpg",
       tags: [
         "Adobe Photoshop",
         "Adobe Illustrator",
-        "Adobe Fonts",
+        "Adobe Lightroom",
       ],
 
       category: "design",
       github: "",
       web: "",
-      see: "biersdorfer-jon.com",
+      see: "Merch.pdf",
     },
 
   ];

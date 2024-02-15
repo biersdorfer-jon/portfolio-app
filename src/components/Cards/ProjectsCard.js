@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaGithub } from "react-icons/fa";
 import { BsBoxArrowUpLeft } from "react-icons/bs";
+import Merch from '../../images/Merch.pdf';
+
 
 
 
@@ -246,7 +248,7 @@ const ProjectsCard = ({project}) => {
             ) : (<></>
                 )}
     {project.see ? (
-            <SeeButton href={project.see} target="_blank">
+            <SeeButton href={Merch} target="_blank">
                 <BsBoxArrowUpLeft />See More
             </SeeButton>
             ) : (<></>
