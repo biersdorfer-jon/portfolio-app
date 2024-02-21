@@ -3,7 +3,8 @@ import { FaReact, FaHtml5, FaCss3Alt, FaSass, FaPython, FaPhp, FaJava, FaNode, F
 import { IoLogoJavascript } from "react-icons/io5";
 import { GrMysql } from "react-icons/gr";
 import { BiLogoNetlify } from "react-icons/bi";
-import { SiAdobe } from "react-icons/si";
+import { SiAdobe, SiMongodb } from "react-icons/si";
+
 
 
 export const Bio = {
@@ -72,6 +73,10 @@ export const skills = [
             icon: FaPhp, 
         },
         {
+          name: "MongoDB",
+            icon: SiMongodb, 
+        },
+        {
           name: "Node Js",
           icon: FaNode, 
         },
@@ -79,6 +84,7 @@ export const skills = [
           name: "Java",
             icon: FaJava, 
         },
+        
       ],
     },
     {
@@ -183,8 +189,8 @@ export const skills = [
         "HTML",
         "CSS",
         "Next Js",
-        "MySQL",
-        "PHP",
+        "Python",
+        "MongoDB",
       ],
 
       category: "backend",
