@@ -180,7 +180,7 @@ export const skills = [
     {
       id: 4,
       title:"Honors Class Page",
-      date: "Coming Soon",
+      date: "May 2024",
       description: "A full-stack honors class website with student biographies offering a detailed glimpse into their achievements and aspirations.",
       image: "Honors.png",
       tags: [
