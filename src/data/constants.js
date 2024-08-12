@@ -1,9 +1,9 @@
 import { TbBrandNextjs, TbBrandVscode } from "react-icons/tb";
-import { FaReact, FaHtml5, FaCss3Alt, FaSass, FaPython, FaPhp, FaJava, FaNode, FaFigma, FaGithub } from "react-icons/fa6";
+import { FaReact, FaHtml5, FaCss3Alt, FaSass, FaPython, FaPhp, FaJava, FaNode, FaFigma, FaGithub, FaAngular, FaWordpress, FaGit, FaGitAlt, FaSquarespace, FaWifi, FaWix } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io5";
 import { GrMysql } from "react-icons/gr";
 import { BiLogoNetlify } from "react-icons/bi";
-import { SiAdobe, SiMongodb } from "react-icons/si";
+import { SiAdobe, SiCanva, SiMongodb } from "react-icons/si";
 
 
 
@@ -52,8 +52,8 @@ export const skills = [
             icon: FaSass, 
         },
       {
-        name: "Next Js",
-        icon: TbBrandNextjs, 
+        name: "Angular",
+        icon: FaAngular, 
         },
       ],
     },
@@ -88,10 +88,58 @@ export const skills = [
       ],
     },
     {
-      title: "Others",
+      title: "Design",
+      skills: [
+        {
+          name: "Adobe Suite",
+          icon: SiAdobe, 
+        },
+        {
+          name: "Wordpress",
+            icon: FaWordpress, 
+          },
+          {
+            name: "Squarespace",
+              icon: FaSquarespace, 
+          },
+          {
+            name: "Canva",
+              icon: SiCanva, 
+          },
+          {
+            name: "Wix",
+              icon: FaWix, 
+          },
+
+      ],
+    },
+    {
+      title: "Terminal",
       skills: [
         {
           name: "GitHub",
+            icon: FaGithub, 
+        },
+          {
+            name: "VS Code",
+              icon: TbBrandVscode, 
+          },
+          {
+            name: "Git",
+              icon: FaGitAlt, 
+          },
+          {
+            name: "GitLab",
+              icon: FaGitAlt, 
+          },
+
+      ],
+    },
+    {
+      title: "Others",
+      skills: [
+        {
+          name: "Google Ads",
             icon: FaGithub, 
         },
         {
@@ -99,17 +147,22 @@ export const skills = [
           icon: SiAdobe, 
         },
         {
-          name: "Figma",
-            icon: FaFigma, 
+          name: "Wordpress",
+            icon: FaWordpress, 
           },
           {
             name: "VS Code",
               icon: TbBrandVscode, 
           },
           {
-            name: "Netlify",
-              icon: BiLogoNetlify, 
+            name: "Squarespace",
+              icon: FaSquarespace, 
           },
+          {
+            name: "Git",
+              icon: FaGitAlt, 
+          },
+
       ],
     },
   ];
@@ -156,27 +209,28 @@ export const skills = [
       github: "https://github.com/biersdorfer-jon/emma",
       web: "https://biersdorfer-mccoy.com",
     },
+    
 
-    {
-      id: 3,
-      title:"College Registration Portal",
-      date: "Oct 2023",
-      description: "A comprehensive college registration platform allowing users have the ability to effortlessly manage their class schedules.",
-      image: "college.png",
-      tags: [
-        "React Js",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Next Js",
-        "MySQL",
-        "PHP",
-      ],
+    // {
+    //   id: 3,
+    //   title:"College Registration Portal",
+    //   date: "Oct 2023",
+    //   description: "A comprehensive college registration platform allowing users have the ability to effortlessly manage their class schedules.",
+    //   image: "college.png",
+    //   tags: [
+    //     "React Js",
+    //     "JavaScript",
+    //     "HTML",
+    //     "CSS",
+    //     "Next Js",
+    //     "MySQL",
+    //     "PHP",
+    //   ],
 
-      category: "backend",
-      github: "https://github.com/biersdorfer-jon/Login",
-      web: "",
-    },
+    //   category: "backend",
+    //   github: "https://github.com/biersdorfer-jon/Login",
+    //   web: "",
+    // },
     {
       id: 4,
       title:"Honors Class Page",
@@ -189,8 +243,6 @@ export const skills = [
         "HTML",
         "CSS",
         "Next Js",
-        "Python",
-        "MongoDB",
       ],
 
       category: "backend",
@@ -198,29 +250,45 @@ export const skills = [
       web: "",
       progress: "https://github.com/biersdorfer-jon",
     },
+    {
+      id: 7,
+      title:"3 Delta Window Films",
+      date: "July 2024",
+      description: "A smooth landing page built for a team of agents showcasing their accolades and providing easily accessible contact methods.",
+      image: "logoBlackRed2.png",
+      tags: [
+        "Wordpress",
+        "Canva",
+        "HTML",
+        "CSS",
+      ],
 
-     {
-       id: 5,
-       title:"Apparel Ecommerce Site",
-       date: "Coming Soon",
-       description: "A full-stack athletic apparel store, optimizing database performance for a seamless and dynamic eCommerce experience.",
-       image: "RTG1.png",
-       tags: [
-         "React Js",
-         "JavaScript",
-         "HTML",
-         "CSS",
-         "Next Js",
-         "MySQL",
-         "Prisma",
-         "Stripe",
-       ],
+      category: "frontend",
+      web: "3deltawindowfilms.mcwdev.com",
+    },
 
-       category: "backend",
-       github: "",
-       web: "",
-       progress: "https://github.com/biersdorfer-jon/RTGadmin",
-     },
+    //  {
+    //    id: 5,
+    //    title:"Apparel Ecommerce Site",
+    //    date: "Coming Soon",
+    //    description: "A full-stack athletic apparel store, optimizing database performance for a seamless and dynamic eCommerce experience.",
+    //    image: "RTG1.png",
+    //    tags: [
+    //      "React Js",
+    //      "JavaScript",
+    //      "HTML",
+    //      "CSS",
+    //      "Next Js",
+    //      "MySQL",
+    //      "Prisma",
+    //      "Stripe",
+    //    ],
+
+    //    category: "backend",
+    //    github: "",
+    //    web: "",
+    //    progress: "https://github.com/biersdorfer-jon/RTGadmin",
+    //  },
 
 
     {
@@ -232,7 +300,6 @@ export const skills = [
       tags: [
         "Adobe Photoshop",
         "Adobe Illustrator",
-        "Adobe Lightroom",
       ],
 
       category: "design",
@@ -252,7 +319,7 @@ export const education = [
     date: "Aug 2020 - May 2024",
     gpa: 3.87,
     major: "Bachelor of Science - Business IT: Software Development and Multimedia",
-    description: "The Software Development and Multimedia Option focuses on object-oriented technology, software engineering, multimedia and web development, and emerging technologies. These concepts have enabled me to craft an advanced skill set that is instrumental in navigating the ever-evolving landscape of software development and multimedia.",
+    description: "The Software Development and Multim edia Option focuses on object-oriented technology, software engineering, multimedia and web development, and emerging technologies. These concepts have enabled me to craft an advanced skill set that is instrumental in navigating the ever-evolving landscape of software development and multimedia.",
     minor:"Honors",
 
 
