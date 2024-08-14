@@ -114,7 +114,7 @@ export const skills = [
       ],
     },
     {
-      title: "Terminal",
+      title: "Development",
       skills: [
         {
           name: "GitHub",
@@ -128,40 +128,6 @@ export const skills = [
             name: "Git",
               icon: FaGitAlt, 
           },
-          {
-            name: "GitLab",
-              icon: FaGitAlt, 
-          },
-
-      ],
-    },
-    {
-      title: "Others",
-      skills: [
-        {
-          name: "Google Ads",
-            icon: FaGithub, 
-        },
-        {
-          name: "Adobe Suite",
-          icon: SiAdobe, 
-        },
-        {
-          name: "Wordpress",
-            icon: FaWordpress, 
-          },
-          {
-            name: "VS Code",
-              icon: TbBrandVscode, 
-          },
-          {
-            name: "Squarespace",
-              icon: FaSquarespace, 
-          },
-          {
-            name: "Git",
-              icon: FaGitAlt, 
-          },
 
       ],
     },
@@ -169,6 +135,23 @@ export const skills = [
   
 
   export const projects = [
+    {
+      id: 7,
+      title:"3 Delta Window Films Website",
+      date: "July 2024",
+      description: "A smooth landing page built for a team of agents showcasing their accolades and providing easily accessible contact methods.",
+      image: "3 Delta Preview.png",
+      tags: [
+        "Wordpress",
+        "Canva",
+        "HTML",
+        "CSS",
+        "Elementor",
+      ],
+
+      category: "web",
+      web: "3deltawindowfilms.mcwdev.com",
+    },
     {
       id: 1,
       title: "Portfolio",
@@ -184,7 +167,7 @@ export const skills = [
         "GSAP",
       ],
 
-      category: "frontend",
+      category: "web",
       github: "https://github.com/biersdorfer-jon/portfolio-app",
       web: "https://biersdorfer-jon.com",
     },
@@ -205,7 +188,7 @@ export const skills = [
         "GSAP",
       ],
 
-      category: "frontend",
+      category: "web",
       github: "https://github.com/biersdorfer-jon/emma",
       web: "https://biersdorfer-mccoy.com",
     },
@@ -242,30 +225,14 @@ export const skills = [
         "JavaScript",
         "HTML",
         "CSS",
-        "Next Js",
       ],
 
-      category: "backend",
-      github: "",
-      web: "",
-      progress: "https://github.com/biersdorfer-jon",
+      category: "web",
+      github: "https://github.com/biersdorfer-jon/capstone",
+      web: "rsuhonors.com",
+      progress: "",
     },
-    {
-      id: 7,
-      title:"3 Delta Window Films",
-      date: "July 2024",
-      description: "A smooth landing page built for a team of agents showcasing their accolades and providing easily accessible contact methods.",
-      image: "logoBlackRed2.png",
-      tags: [
-        "Wordpress",
-        "Canva",
-        "HTML",
-        "CSS",
-      ],
-
-      category: "frontend",
-      web: "3deltawindowfilms.mcwdev.com",
-    },
+    
 
     //  {
     //    id: 5,
@@ -307,6 +274,22 @@ export const skills = [
       web: "",
       see: "Merch.pdf",
     },
+    // {
+    //   id: 8,
+    //   title:"Social Media Design Services",
+    //   date: "Jan 2024",
+    //   description: "A collection showcasing  a diverse array of clothing designs and mockups featuring logos across various apparel styles.",
+    //   image: "squad2.jpg",
+    //   tags: [
+    //     "Adobe Photoshop",
+    //     "Canva",
+    //   ],
+
+    //   category: "design",
+    //   github: "",
+    //   web: "",
+    //   see: "Merch.pdf",
+    // },
 
   ];
 

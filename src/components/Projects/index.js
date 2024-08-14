@@ -204,18 +204,11 @@ const Projects = () => {
               ) : (<ToggleButton value="all" onClick={() => setToggle('all')}>ALL</ToggleButton>
               )}
                 <Divider />
-                {toggle === "frontend" ? (
-                <ToggleButton active onClick={() => setToggle('frontend')}>
-                  FRONTEND
+                {toggle === "web" ? (
+                <ToggleButton active onClick={() => setToggle('web')}>
+                  WEB
                   </ToggleButton>
-                ) : (<ToggleButton value="frontend" onClick={() => setToggle('frontend')}>FRONTEND</ToggleButton>
-                )}
-                <Divider />
-                {toggle === "backend" ? (
-                <ToggleButton active onClick={() => setToggle('backend')}>
-                  BACKEND
-                  </ToggleButton>
-                ) : (<ToggleButton value="backend" onClick={() => setToggle('backend')}>BACKEND</ToggleButton>
+                ) : (<ToggleButton value="web" onClick={() => setToggle('web')}>WEB</ToggleButton>
                 )}
                 <Divider />
                 {toggle === "design" ? (
