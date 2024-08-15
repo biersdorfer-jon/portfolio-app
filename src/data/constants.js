@@ -150,8 +150,64 @@ export const skills = [
       ],
 
       category: "web",
-      web: "3deltawindowfilms.mcwdev.com",
+      web: "https://3deltawindowfilms.mcwdev.com",
     },
+    {
+      id: 8,
+      title:"Ultimate Cabinets Pages",
+      date: "July 2024",
+      description: "A collection showcasing  a diverse array of clothing designs and mockups featuring logos across various apparel styles.",
+      image: "Ultimate Cabinets Preview.png",
+      tags: [
+        "Wordpress",
+        "Canva",
+        "HTML",
+        "CSS",
+        "Elementor",
+      ],
+
+      category: "web",
+      web: "https://ultimatecabinetsok.com",
+    },
+    {
+      id: 9,
+      title:"Firehouse Roofing Pages",
+      date: "July 2024",
+      description: "A collection showcasing  a diverse array of clothing designs and mockups featuring logos across various apparel styles.",
+      image: "Firehouse Roofing.png",
+      tags: [
+        "Wordpress",
+        "Canva",
+        "HTML",
+        "CSS",
+        "Elementor",
+      ],
+
+      category: "web",
+      web: "https://firehouseroofingco.com/residential-roofing/",
+    },
+
+    {
+      id: 2,
+      title:"Real Estate Landing Page",
+      date: "Jan 2024",
+      description: "A smooth landing page built for a team of agents showcasing their accolades and providing easily accessible contact methods.",
+      image: "logoBlackRed2.png",
+      tags: [
+        "React Js",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Next Js",
+        "Email Js",
+        "GSAP",
+      ],
+
+      category: "web",
+      github: "https://github.com/biersdorfer-jon/emma",
+      web: "https://biersdorfer-mccoy.com",
+    },
+    
     {
       id: 1,
       title: "Portfolio",
@@ -171,28 +227,6 @@ export const skills = [
       github: "https://github.com/biersdorfer-jon/portfolio-app",
       web: "https://biersdorfer-jon.com",
     },
-
-    {
-      id: 2,
-      title:"Real Estate Page",
-      date: "Jan 2024",
-      description: "A smooth landing page built for a team of agents showcasing their accolades and providing easily accessible contact methods.",
-      image: "logoBlackRed2.png",
-      tags: [
-        "React Js",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Next Js",
-        "Email Js",
-        "GSAP",
-      ],
-
-      category: "web",
-      github: "https://github.com/biersdorfer-jon/emma",
-      web: "https://biersdorfer-mccoy.com",
-    },
-    
 
     // {
     //   id: 3,
@@ -229,7 +263,7 @@ export const skills = [
 
       category: "web",
       github: "https://github.com/biersdorfer-jon/capstone",
-      web: "rsuhonors.com",
+      web: "https://rsuhonors.com",
       progress: "",
     },
     
@@ -274,22 +308,23 @@ export const skills = [
       web: "",
       see: "Merch.pdf",
     },
-    // {
-    //   id: 8,
-    //   title:"Social Media Design Services",
-    //   date: "Jan 2024",
-    //   description: "A collection showcasing  a diverse array of clothing designs and mockups featuring logos across various apparel styles.",
-    //   image: "squad2.jpg",
-    //   tags: [
-    //     "Adobe Photoshop",
-    //     "Canva",
-    //   ],
+    {
+      id: 10,
+      title:"Social Media Brand Design",
+      date: "Jan 2024",
+      description: "A collection showcasing  a diverse array of clothing designs and mockups featuring logos across various apparel styles.",
+      image: "squad2.jpg",
+      tags: [
+        "Adobe Photoshop",
+        "Canva",
+      ],
 
-    //   category: "design",
-    //   github: "",
-    //   web: "",
-    //   see: "Merch.pdf",
-    // },
+      category: "design",
+      github: "",
+      web: "",
+      see: "Merch.pdf",
+    },
+    
 
   ];
 
